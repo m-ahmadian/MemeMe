@@ -105,6 +105,10 @@ class ViewController: UIViewController{
     }
     
     
+    @IBAction func dismissCreateMeme(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
 
     // MARK: Notification Functions

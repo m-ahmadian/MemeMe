@@ -130,7 +130,7 @@
         <!--Collection View-->
         <scene sceneID="3xs-kS-5Te">
             <objects>
-                <viewController id="UrE-8m-x6E" sceneMemberID="viewController">
+                <viewController id="UrE-8m-x6E" customClass="SentMemesCollectionViewController" customModule="MemeMe_1_0___2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5aB-yd-kvR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,7 +145,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomMemeCell" id="9wI-SV-lGj">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="let" id="9wI-SV-lGj" customClass="CustomMemeCell" customModule="MemeMe_1_0___2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="101" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -158,6 +158,9 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <connections>
+                                            <outlet property="collectionImageView" destination="5zs-Xf-I2t" id="FXC-sC-H9Q"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -173,9 +176,17 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Collection View" id="Gu0-by-4Ec"/>
                     <navigationItem key="navigationItem" id="QjN-p5-6wB">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gyF-D0-rbf"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gyF-D0-rbf">
+                            <connections>
+                                <action selector="createNewMeme:" destination="UrE-8m-x6E" id="ZCF-qA-FhY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Hch-rt-UWy" id="Kws-94-H2Z"/>
+                        <outlet property="flowLayout" destination="5Q4-c5-H0M" id="s0K-km-TyU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="91x-Ix-OWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -222,7 +233,11 @@
                                 <items>
                                     <barButtonItem systemItem="action" id="ZYm-ZF-m6r"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Iev-Pi-UmY"/>
-                                    <barButtonItem title="Cancel" id="tBw-dw-9f2"/>
+                                    <barButtonItem title="Cancel" id="tBw-dw-9f2">
+                                        <connections>
+                                            <action selector="dismissCreateMeme:" destination="TUK-u7-GLm" id="iIv-pI-DEW"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eZY-Dh-wc8">
