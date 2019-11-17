@@ -11,6 +11,8 @@
 		E879DEAC21454DAF00CD12D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E879DEAA21454DAF00CD12D5 /* Main.storyboard */; };
 		E879DEAE21454DB200CD12D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E879DEAD21454DB200CD12D5 /* Assets.xcassets */; };
 		E879DEB121454DB200CD12D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E879DEAF21454DB200CD12D5 /* LaunchScreen.storyboard */; };
+		E89017352380DB0900F9F8B9 /* SentMemesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89017342380DB0900F9F8B9 /* SentMemesTableViewController.swift */; };
+		E89017372380E06000F9F8B9 /* DetailMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89017362380E06000F9F8B9 /* DetailMemeViewController.swift */; };
 		E897BA26216A1FE700EB8A6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E897BA25216A1FE700EB8A6F /* ViewController.swift */; };
 		E8D583D622BFFB1B00102312 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D583D522BFFB1B00102312 /* TextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -22,6 +24,8 @@
 		E879DEAD21454DB200CD12D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E879DEB021454DB200CD12D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E879DEB221454DB200CD12D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E89017342380DB0900F9F8B9 /* SentMemesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMemesTableViewController.swift; sourceTree = "<group>"; };
+		E89017362380E06000F9F8B9 /* DetailMemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMemeViewController.swift; sourceTree = "<group>"; };
 		E897BA25216A1FE700EB8A6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E8D583D522BFFB1B00102312 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +62,8 @@
 			children = (
 				E879DEB8214553AB00CD12D5 /* Text Field Delegates */,
 				E879DEA621454DAF00CD12D5 /* AppDelegate.swift */,
+				E89017362380E06000F9F8B9 /* DetailMemeViewController.swift */,
+				E89017342380DB0900F9F8B9 /* SentMemesTableViewController.swift */,
 				E897BA25216A1FE700EB8A6F /* ViewController.swift */,
 				E879DEAA21454DAF00CD12D5 /* Main.storyboard */,
 				E879DEAD21454DB200CD12D5 /* Assets.xcassets */,
@@ -147,6 +153,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E879DEA721454DAF00CD12D5 /* AppDelegate.swift in Sources */,
+				E89017352380DB0900F9F8B9 /* SentMemesTableViewController.swift in Sources */,
+				E89017372380E06000F9F8B9 /* DetailMemeViewController.swift in Sources */,
 				E8D583D622BFFB1B00102312 /* TextFieldDelegate.swift in Sources */,
 				E897BA26216A1FE700EB8A6F /* ViewController.swift in Sources */,
 			);
