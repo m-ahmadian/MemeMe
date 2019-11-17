@@ -146,8 +146,8 @@ class ViewController: UIViewController{
     func generateMemedImage() -> UIImage {
         
         // Hide Toolbar
-//        self.topToolbar.isHidden = true
-//        self.bottomToolbar.isHidden = true
+        self.topToolbar.isHidden = true
+        self.bottomToolbar.isHidden = true
         self.navigationController?.setToolbarHidden(true, animated: true)
         
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -158,7 +158,7 @@ class ViewController: UIViewController{
         // Show Toolbar
         self.topToolbar.isHidden = false
         self.bottomToolbar.isHidden = false
-        self.navigationController?.setToolbarHidden(true, animated: true)
+        self.navigationController?.setToolbarHidden(false, animated: true)
         
         return memedImage
     }
@@ -171,6 +171,23 @@ class ViewController: UIViewController{
         // Add it to the memes array on the Application Delegate
         (UIApplication.shared.delegate as! AppDelegate).memes.append(meme)
     }
+    
+    
+    @IBAction func share(_ sender: Any) {
+        let image = generateMemedImage()
+        let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        self.present(activityViewController, animated: true, completion: nil)
+        
+        activityViewController.completionWithItemsHandler = {
+            (activityType, complete, returnedItems, activityError) in
+            
+            if complete {
+                self.save()
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+    }
+    
     
 }
 

@@ -33,6 +33,7 @@ class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        SentMemesTableViewController.load()
         self.tableView.reloadData()
     }
     
@@ -40,11 +41,11 @@ class SentMemesTableViewController: UIViewController, UITableViewDelegate, UITab
     // MARK: UITableView Data Source Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return memes.count
+        return self.memes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomMemeCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SentMemesTableViewCell", for: indexPath)
         let meme = self.memes[(indexPath as NSIndexPath).row]
         
         cell.textLabel?.text = meme.topText

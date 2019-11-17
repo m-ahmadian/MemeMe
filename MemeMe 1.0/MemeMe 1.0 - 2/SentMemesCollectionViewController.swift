@@ -49,6 +49,7 @@ class SentMemesCollectionViewController: UIViewController, UICollectionViewDeleg
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.reloadInputViews()
         self.collectionView.reloadData()
     }
     
